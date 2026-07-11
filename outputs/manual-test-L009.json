@@ -1,0 +1,36 @@
+{
+  "lead_id": "L009",
+  "lead_category": "warm",
+  "lead_score": 60,
+  "priority": "medium",
+  "score_breakdown": {
+    "budget_clarity": 10,
+    "timeline_urgency": 5,
+    "service_clarity": 25,
+    "buying_intent": 20
+  },
+  "qualification_reason": "The lead has a clear product photography interest and some buying intent, but the budget is not finalized and the timeline is uncertain.",
+  "main_need": "Product photography for a handmade craft catalog",
+  "hidden_need": "Better product visuals to improve catalog presentation and support sales",
+  "missing_information": [
+    "number of products to photograph",
+    "photo style reference",
+    "usage channel",
+    "budget flexibility",
+    "expected timeline",
+    "whether product styling is needed"
+  ],
+  "next_best_action": "Clarify the number of products, desired photo style, usage channel, budget flexibility, and expected timeline before recommending a package.",
+  "follow_up_strategy": "pricing_clarification",
+  "recommended_response_type": "pricing_question",
+  "follow_up_message": "Halo Kak Mira, bisa Kak. Untuk foto produk katalog, biasanya kebutuhan dan harga tergantung jumlah produk, style foto, dan apakah perlu styling tambahan. Boleh tahu kira-kira ada berapa produk yang ingin difoto dan fotonya nanti dipakai untuk katalog, marketplace, atau Instagram?",
+  "crm_status": "qualified_warm",
+  "next_follow_up_date": "2026-07-12",
+  "owner_action_required": "Review the draft message and manually clarify product quantity, photo style, usage channel, budget flexibility, and timeline.",
+  "crm_note": "Handmade craft store lead interested in product photography but budget and timeline are uncertain. Clarify product quantity, usage channel, style reference, and budget flexibility.",
+  "quality_check": "needs_review",
+  "risk_flags": [
+    "missing_timeline"
+  ],
+  "requires_human_review": true
+}

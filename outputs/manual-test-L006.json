@@ -1,0 +1,38 @@
+{
+  "lead_id": "L006",
+  "lead_category": "cold",
+  "lead_score": 15,
+  "priority": "low",
+  "score_breakdown": {
+    "budget_clarity": 0,
+    "timeline_urgency": 0,
+    "service_clarity": 10,
+    "buying_intent": 5
+  },
+  "qualification_reason": "The lead is asking for general marketing service information without mentioning budget, timeline, or a specific active project.",
+  "main_need": "General marketing consultation",
+  "hidden_need": "Understanding available marketing options before deciding whether to proceed",
+  "missing_information": [
+    "specific marketing problem",
+    "business goal",
+    "available budget",
+    "expected timeline",
+    "current marketing channels",
+    "decision-making stage"
+  ],
+  "next_best_action": "Ask a simple discovery question to identify the gym's current marketing problem, goal, and whether they are exploring options or ready to start.",
+  "follow_up_strategy": "discovery_question",
+  "recommended_response_type": "service_explanation",
+  "follow_up_message": "Halo Kak Bima, boleh Kak. Secara umum aku bisa bantu dari sisi strategi konten, social media management, campaign, sampai konsultasi marketing dasar. Supaya aku bisa arahkan yang paling relevan, boleh tahu saat ini tantangan utama gym-nya apa? Misalnya ingin tambah member baru, aktifkan Instagram, atau promosi program tertentu.",
+  "crm_status": "qualified_cold",
+  "next_follow_up_date": "2026-07-16",
+  "owner_action_required": "Review the draft message and manually clarify the lead's business goal, budget, timeline, and current marketing challenge.",
+  "crm_note": "Local gym lead is asking general marketing service information with no budget or timeline. Clarify business goal, current marketing challenge, and readiness to start.",
+  "quality_check": "needs_review",
+  "risk_flags": [
+    "missing_budget",
+    "missing_timeline",
+    "low_buying_intent"
+  ],
+  "requires_human_review": true
+}

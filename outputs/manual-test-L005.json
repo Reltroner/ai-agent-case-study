@@ -1,0 +1,35 @@
+{
+  "lead_id": "L005",
+  "lead_category": "hot",
+  "lead_score": 95,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 20,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear branding and launch content need, clear monthly budget, near-term timeline, and strong project intent.",
+  "main_need": "Branding and launch content for a fashion brand",
+  "hidden_need": "A stronger brand identity and structured launch campaign to support the fashion brand's upcoming release",
+  "missing_information": [
+    "current brand identity condition",
+    "launch date",
+    "number of content assets needed",
+    "target audience",
+    "visual style reference",
+    "platforms to be used",
+    "approval and revision process"
+  ],
+  "next_best_action": "Ask for the launch date, current brand condition, target audience, and expected content deliverables before recommending a suitable branding and launch content package.",
+  "follow_up_strategy": "consultative",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Salsa, bisa banget Kak. Untuk kebutuhan rebranding dan konten launching, boleh aku tahu rencana launch-nya kapan, target audience-nya siapa, dan sejauh ini brand identity-nya sudah sampai tahap apa? Kalau ada referensi visual atau akun brand-nya, boleh juga dikirim supaya aku bisa bantu arahkan kebutuhan yang paling sesuai.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review the draft message and manually ask for launch date, brand condition, target audience, and content deliverables.",
+  "crm_note": "Fashion brand lead with clear budget and near-term branding plus launch content need. Clarify launch date, brand identity status, content assets, target audience, and visual references.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}

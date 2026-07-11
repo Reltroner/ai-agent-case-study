@@ -1,0 +1,405 @@
+Kita jadikan proyek ini sebagai **AI Agent Engineering Snapshot**, bukan sekadar “belajar AI agent”. Fondasinya sudah jelas dari dokumen: proyek ini adalah **self-built agentic workflow simulation** untuk membantu bisnis jasa kecil mengubah lead yang tercecer menjadi follow-up yang terstruktur, terprioritaskan, dan tetap melalui human review. 
+
+## Target Akhir Snapshot
+
+Target akhir proyek ini:
+
+> **Membangun snapshot engineering yang membuktikan bahwa kamu bisa merancang AI-assisted workflow dari Problem → Solution → Result, lengkap dengan agent role, data contract, scoring logic, prompt versioning, QA guard, human-in-the-loop, dan dokumentasi portfolio.**
+
+Bukan target akhir:
+
+```text
+Membuat SaaS CRM full production.
+Membuat WhatsApp bot otomatis.
+Membuat dashboard kompleks.
+Membuat AI agent autonomous tanpa review manusia.
+```
+
+Target akhir yang realistis:
+
+```text
+AI Lead Follow-Up Assistant
+= agentic simulation prototype
+= lead input -> AI processing -> structured output -> human review
+```
+
+---
+
+# 1. Final Snapshot yang Harus Jadi
+
+Pada akhir proyek, snapshot harus punya 7 bukti utama:
+
+## 1. Business Problem Locked
+
+```text
+Small service businesses lose potential clients because incoming leads are scattered, follow-up is manual, and serious prospects are not prioritized.
+```
+
+## 2. Workflow Design
+
+```text
+Lead Input
+-> Lead Intake Agent
+-> Lead Qualification Agent
+-> Need Extraction Agent
+-> Follow-Up Strategy Agent
+-> Message Drafting Agent
+-> CRM Update Agent
+-> QA Guard Agent
+-> Human Review
+```
+
+## 3. Data Contract
+
+Output agent harus punya JSON standar:
+
+```json
+{
+  "lead_id": "",
+  "lead_category": "hot | warm | cold",
+  "lead_score": 0,
+  "main_need": "",
+  "missing_information": [],
+  "next_best_action": "",
+  "follow_up_message": "",
+  "crm_status": "",
+  "next_follow_up_date": "",
+  "risk_flags": [],
+  "requires_human_review": true
+}
+```
+
+## 4. Sample Dataset
+
+Minimal:
+
+```text
+10 dummy leads
+```
+
+Dengan variasi:
+
+```text
+hot lead
+warm lead
+cold lead
+budget unclear
+timeline unclear
+service unclear
+urgent lead
+low-intent lead
+duplicate-like lead
+incomplete lead
+```
+
+## 5. Manual Simulation Output
+
+Minimal:
+
+```text
+10 leads berhasil diproses manual
+10 output JSON tersimpan
+Setiap output punya classification, score, draft, next action, dan human review flag
+```
+
+## 6. Semi-Automated Prototype
+
+Versi berikutnya:
+
+```text
+Google Form / manual trigger
+-> n8n
+-> AI processing
+-> parse JSON
+-> Google Sheet
+-> owner notification
+```
+
+## 7. Portfolio Case Study
+
+Akhirnya harus bisa dijelaskan sebagai:
+
+```text
+Problem:
+Lead follow-up bisnis jasa kecil masih manual dan tercecer.
+
+Solution:
+AI-assisted workflow untuk klasifikasi lead, ekstraksi kebutuhan, draft follow-up, dan CRM status.
+
+Result:
+Lead menjadi lebih rapi, prioritas lebih jelas, draft lebih cepat dibuat, dan owner tetap memegang kontrol sebelum pesan dikirim.
+```
+
+---
+
+# 2. Breakdown Chunk Gradual dan Deterministik
+
+## Phase 1 — Manual Agentic Simulation Foundation
+
+Fokus: membuktikan logic sebelum automation.
+
+| Chunk | Nama                                | Output                                                |
+| ----- | ----------------------------------- | ----------------------------------------------------- |
+| 1.1   | Project Framing & Snapshot Contract | Problem, solution, result, scope, final output locked |
+| 1.2   | Sample Lead Dataset                 | 10 dummy leads                                        |
+| 1.3   | Lead Scoring & Status Lifecycle     | Rule hot/warm/cold + CRM status                       |
+| 1.4   | Agent Role Design                   | 7 agent role + responsibility                         |
+| 1.5   | JSON Output Schema                  | Standard output contract                              |
+| 1.6   | Prompt v1 Design                    | Prompt utama untuk simulasi                           |
+| 1.7   | Manual Simulation Test              | 10 lead diproses manual                               |
+| 1.8   | QA & Error Handling                 | fallback, invalid JSON, missing info                  |
+| 1.9   | Case Study v0                       | Problem → Solution → Result draft                     |
+
+---
+
+## Phase 2 — Semi-Automated n8n Prototype
+
+Fokus: input → process → output.
+
+| Chunk | Nama                 | Output                             |
+| ----- | -------------------- | ---------------------------------- |
+| 2.1   | Google Sheet Tracker | Sheet sebagai mini CRM             |
+| 2.2   | n8n Manual Trigger   | Workflow menerima lead             |
+| 2.3   | AI Processing Node   | Agent prompt jalan di n8n          |
+| 2.4   | JSON Parser          | Output AI diparse                  |
+| 2.5   | Sheet Update         | Result masuk ke tracker            |
+| 2.6   | Owner Notification   | Email/Telegram notification        |
+| 2.7   | Fallback Path        | Jika AI gagal, status needs_review |
+| 2.8   | Demo Run             | 3–5 lead berhasil dari n8n         |
+
+---
+
+## Phase 3 — Portfolio Snapshot
+
+Fokus: bukti yang bisa ditunjukkan ke orang lain.
+
+| Chunk | Nama                     | Output                              |
+| ----- | ------------------------ | ----------------------------------- |
+| 3.1   | README Final             | Penjelasan bisnis + teknis          |
+| 3.2   | Workflow Diagram         | Diagram alur agent                  |
+| 3.3   | Demo Script              | Script video demo                   |
+| 3.4   | Case Study Final         | Problem → Solution → Result         |
+| 3.5   | Before-After Explanation | Manual chaos vs structured workflow |
+| 3.6   | LinkedIn Post Draft      | Story portfolio                     |
+
+---
+
+## Phase 4 — Production-Like Simulation
+
+Fokus: engineering credibility lanjutan, bukan MVP awal.
+
+| Chunk | Nama                  | Output                              |
+| ----- | --------------------- | ----------------------------------- |
+| 4.1   | Backend API Design    | endpoint lead intake                |
+| 4.2   | PostgreSQL Schema     | leads, agent_outputs, audit_logs    |
+| 4.3   | Webhook Endpoint      | n8n/backend integration             |
+| 4.4   | Audit Log             | prompt version, timestamp, decision |
+| 4.5   | Simple Dashboard      | lead priority, status, draft        |
+| 4.6   | Deployment Simulation | Vercel/Cloudflare/API               |
+
+---
+
+# 3. Sekarang Mulai: Chunk 1.1
+
+## Chunk 1.1 — Project Framing & Snapshot Contract
+
+Tujuan chunk ini:
+
+> Mengunci arah proyek agar tidak melebar, tidak terjebak hype tools, dan punya target akhir yang bisa dieksekusi secara bertahap.
+
+Pada chunk 1.1, **jangan build n8n dulu**.
+Jangan buat dashboard dulu.
+Jangan mikir WhatsApp API dulu.
+Jangan langsung coding kompleks.
+
+Chunk 1.1 hanya mengunci fondasi.
+
+---
+
+## 1.1.A — Nama Proyek
+
+```text
+AI Lead Follow-Up Assistant
+```
+
+## 1.1.B — Jenis Proyek
+
+```text
+Self-built AI agentic workflow simulation prototype
+```
+
+## 1.1.C — Target User Simulasi
+
+```text
+Small service business owner
+```
+
+Contoh bisnis:
+
+```text
+social media management agency
+design service
+content service
+wedding organizer
+online course creator
+small marketing service
+local creative service
+```
+
+## 1.1.D — Problem Statement
+
+```text
+Small service businesses often receive leads from Instagram, WhatsApp, website forms, and referrals, but their follow-up process is still manual, scattered, and inconsistent.
+```
+
+## 1.1.E — Business Impact
+
+```text
+As a result, serious prospects can be missed, owners waste time rewriting similar replies, and there is no clear system for prioritizing which leads should be followed up first.
+```
+
+## 1.1.F — Solution Statement
+
+```text
+AI Lead Follow-Up Assistant simulates an AI-assisted workflow that captures lead information, classifies lead priority, extracts customer needs, generates follow-up drafts, updates CRM status, and keeps human review before any message is sent.
+```
+
+## 1.1.G — Result Goal
+
+```text
+The snapshot should demonstrate that scattered lead inquiries can be transformed into structured, prioritized, and ready-to-review follow-up actions.
+```
+
+## 1.1.H — Safety Principle
+
+```text
+The system does not auto-send messages.
+Every AI-generated follow-up draft requires human review.
+```
+
+## 1.1.I — MVP Scope
+
+Masuk MVP:
+
+```text
+1. 10 sample leads
+2. Lead classification
+3. Lead scoring
+4. Need extraction
+5. Follow-up draft generation
+6. CRM status recommendation
+7. Human review flag
+8. JSON output
+9. Manual simulation
+10. Case study documentation
+```
+
+Tidak masuk MVP:
+
+```text
+1. WhatsApp API integration
+2. Instagram DM integration
+3. Full CRM
+4. Payment system
+5. Multi-user dashboard
+6. Auto-send message
+7. Complex agent memory
+8. Real client deployment
+```
+
+---
+
+# 4. Definition of Done Chunk 1.1
+
+Chunk 1.1 selesai kalau kamu sudah punya dokumen singkat berisi:
+
+```text
+1. Project name
+2. Project type
+3. Target user
+4. Problem statement
+5. Business impact
+6. Solution statement
+7. Result goal
+8. Safety principle
+9. MVP scope
+10. Non-MVP scope
+```
+
+File yang disarankan:
+
+```text
+docs/project-framing.md
+```
+
+Isi minimal:
+
+```md
+# AI Lead Follow-Up Assistant — Project Framing
+
+## Project Type
+Self-built AI agentic workflow simulation prototype.
+
+## Target User
+Small service business owners who receive leads from Instagram, WhatsApp, website forms, or referrals.
+
+## Problem
+Small service businesses often receive leads from multiple channels, but follow-up is still manual, scattered, and inconsistent.
+
+## Business Impact
+Serious prospects may be missed, owners repeatedly write similar replies from scratch, and there is no clear system for prioritizing leads.
+
+## Solution
+AI Lead Follow-Up Assistant simulates an AI-assisted workflow that captures lead information, classifies priority, extracts customer needs, generates follow-up drafts, updates CRM status, and keeps human review before sending.
+
+## Result Goal
+The project demonstrates how scattered lead inquiries can become structured, prioritized, and ready-to-review follow-up actions.
+
+## Safety Principle
+The AI does not send messages automatically. Every draft requires human review.
+
+## MVP Scope
+- 10 sample leads
+- Lead classification
+- Lead scoring
+- Need extraction
+- Follow-up draft
+- CRM status
+- Human review flag
+- JSON output
+- Manual simulation
+- Case study
+
+## Out of Scope
+- WhatsApp API
+- Instagram DM integration
+- Full CRM
+- Payment system
+- Multi-user dashboard
+- Auto-send behavior
+- Real production deployment
+```
+
+---
+
+# 5. Progress Marker
+
+```text
+Global Progress: 0% -> 5%
+Phase 1 Progress: 0% -> 10%
+Chunk 1.1 Progress: Ready to execute
+```
+
+Setelah chunk 1.1 selesai, next deterministic chunk adalah:
+
+```text
+Chunk 1.2 — Sample Lead Dataset
+```
+
+Output chunk 1.2 nanti:
+
+```text
+data/sample-leads.csv
+```
+
+Berisi minimal 10 lead dummy yang sengaja dibuat bervariasi supaya agent bisa diuji secara realistis.

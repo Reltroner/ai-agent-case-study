@@ -1,0 +1,35 @@
+{
+  "lead_id": "L002",
+  "lead_category": "warm",
+  "lead_score": 55,
+  "priority": "medium",
+  "score_breakdown": {
+    "budget_clarity": 15,
+    "timeline_urgency": 5,
+    "service_clarity": 25,
+    "buying_intent": 10
+  },
+  "qualification_reason": "The lead has a clear service interest and mentioned a limited budget, but the timeline is uncertain and the message is mainly asking for pricing information.",
+  "main_need": "Instagram feed design",
+  "hidden_need": "Improving the coffee shop's visual presence on Instagram with affordable design support",
+  "missing_information": [
+    "number of feed designs needed",
+    "current Instagram account",
+    "preferred design style",
+    "whether the budget is fixed or flexible",
+    "expected start date"
+  ],
+  "next_best_action": "Clarify the number of designs needed, timeline, and whether the budget is fixed before recommending a suitable package.",
+  "follow_up_strategy": "pricing_clarification",
+  "recommended_response_type": "pricing_question",
+  "follow_up_message": "Halo Kak Rama, boleh Kak. Untuk desain feed IG, harganya biasanya tergantung jumlah desain, style visual, dan apakah perlu sekalian bantu konsep kontennya. Boleh aku tahu kira-kira butuh berapa desain dulu dan budget di bawah 1 juta itu untuk sekali project atau per bulan?",
+  "crm_status": "qualified_warm",
+  "next_follow_up_date": "2026-07-12",
+  "owner_action_required": "Review the draft message and clarify the lead's design quantity, budget scope, and timeline manually.",
+  "crm_note": "Coffee shop lead interested in Instagram feed design with limited budget and unclear timeline. Clarify quantity, budget scope, design style, and expected start date.",
+  "quality_check": "needs_review",
+  "risk_flags": [
+    "missing_timeline"
+  ],
+  "requires_human_review": true
+}

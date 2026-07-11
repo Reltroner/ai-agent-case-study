@@ -1,0 +1,32 @@
+{
+  "lead_id": "L001",
+  "lead_category": "hot",
+  "lead_score": 90,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 20,
+    "service_clarity": 25,
+    "buying_intent": 20
+  },
+  "qualification_reason": "The lead has a clear service interest, clear monthly budget, this-month timeline, and active buying intent.",
+  "main_need": "Monthly Instagram social media management",
+  "hidden_need": "Consistent content planning and stronger brand presence for a skincare brand",
+  "missing_information": [
+    "current Instagram account",
+    "monthly content target",
+    "brand style preference",
+    "approval process"
+  ],
+  "next_best_action": "Ask for the Instagram profile and monthly content goals before recommending the most suitable service package.",
+  "follow_up_strategy": "consultative",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Dinda, terima kasih sudah menghubungi. Bisa banget Kak. Sebelum aku kasih gambaran paket yang paling cocok, boleh aku lihat dulu akun Instagram brand-nya dan target konten bulan ini seperti apa? Biar nanti aku bisa bantu arahkan apakah lebih cocok mulai dari content planning, desain feed, atau full social media management.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review and send the follow-up message manually.",
+  "crm_note": "Potential monthly social media management client for a skincare brand. Ask for Instagram profile, content goals, brand style, and approval process.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}

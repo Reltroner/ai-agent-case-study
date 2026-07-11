@@ -1,0 +1,37 @@
+{
+  "lead_id": "L004",
+  "lead_category": "warm",
+  "lead_score": 75,
+  "priority": "medium",
+  "score_breakdown": {
+    "budget_clarity": 0,
+    "timeline_urgency": 25,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear landing page need, urgent timeline, and strong buying intent, but the budget is not mentioned.",
+  "main_need": "Landing page for an online course",
+  "hidden_need": "A conversion-focused page to present and sell the online course more clearly",
+  "missing_information": [
+    "available budget",
+    "course topic",
+    "target audience",
+    "landing page content readiness",
+    "preferred launch date",
+    "payment or registration flow",
+    "design reference"
+  ],
+  "next_best_action": "Clarify the available budget, course details, launch timeline, and whether the lead already has landing page content prepared.",
+  "follow_up_strategy": "pricing_clarification",
+  "recommended_response_type": "pricing_question",
+  "follow_up_message": "Halo Kak Andi, bisa Kak. Untuk landing page kelas online, aku perlu tahu dulu beberapa hal supaya arahnya tepat: kelasnya tentang apa, target pesertanya siapa, dan apakah materi copywriting atau kontennya sudah siap? Boleh juga info kisaran budget dan target launch-nya kapan supaya aku bisa bantu arahkan opsi yang paling masuk akal.",
+  "crm_status": "qualified_warm",
+  "next_follow_up_date": "2026-07-12",
+  "owner_action_required": "Review the draft message and manually clarify budget, course details, content readiness, and launch timeline.",
+  "crm_note": "Online course lead needs a landing page urgently but has not mentioned budget. Clarify budget, course topic, target audience, content readiness, and launch date.",
+  "quality_check": "needs_review",
+  "risk_flags": [
+    "missing_budget"
+  ],
+  "requires_human_review": true
+}

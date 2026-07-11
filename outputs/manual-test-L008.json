@@ -1,0 +1,35 @@
+{
+  "lead_id": "L008",
+  "lead_category": "hot",
+  "lead_score": 100,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 25,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear lead generation campaign need, clear budget, immediate timeline, and strong buying intent to find property buyers this month.",
+  "main_need": "Lead generation campaign for real estate buyers",
+  "hidden_need": "A targeted marketing campaign that can attract qualified property buyer inquiries quickly",
+  "missing_information": [
+    "property type",
+    "target buyer profile",
+    "campaign location",
+    "available marketing assets",
+    "preferred advertising channels",
+    "definition of qualified buyer",
+    "campaign success metric"
+  ],
+  "next_best_action": "Ask for property details, target buyer profile, campaign location, and available marketing assets before recommending the campaign structure.",
+  "follow_up_strategy": "proposal_next_step",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Fajar, bisa Kak. Untuk campaign cari buyer properti bulan ini, boleh aku tahu tipe propertinya, lokasi campaign-nya, dan target buyer yang ingin dicari seperti apa? Kalau sudah ada materi seperti foto, video, brosur, atau landing page, boleh juga dikirim supaya aku bisa bantu susun arah campaign yang lebih tepat.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review the draft message and manually collect property details, target buyer profile, campaign assets, and success criteria.",
+  "crm_note": "Real estate lead with clear budget, immediate timeline, and strong buyer acquisition need. Clarify property type, campaign location, buyer profile, assets, and success metrics.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}

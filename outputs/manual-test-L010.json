@@ -1,0 +1,35 @@
+{
+  "lead_id": "L010",
+  "lead_category": "hot",
+  "lead_score": 95,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 20,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear website and content strategy need, clear monthly budget, this-month timeline, and strong business intent for a corporate training program.",
+  "main_need": "Website and content strategy for a corporate training program",
+  "hidden_need": "A more credible digital presence and structured content funnel to attract or convert corporate training clients",
+  "missing_information": [
+    "current website condition",
+    "training program details",
+    "target corporate audience",
+    "required website pages",
+    "content channels",
+    "conversion goal",
+    "decision timeline"
+  ],
+  "next_best_action": "Ask for the current website condition, training program details, target corporate audience, and conversion goal before preparing a strategic recommendation.",
+  "follow_up_strategy": "consultative",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Yusuf, terima kasih sudah menghubungi. Bisa Kak. Untuk kebutuhan website baru dan strategi konten program pelatihan corporate, boleh aku tahu kondisi website saat ini, jenis program pelatihannya, dan target corporate audience-nya siapa? Dari situ aku bisa bantu arahkan struktur website dan strategi konten yang paling relevan.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review the draft message and manually ask for current website condition, training program details, audience, and conversion goal.",
+  "crm_note": "Training provider lead with clear budget and strong website plus content strategy need. Clarify current website condition, program details, corporate audience, required pages, and conversion goal.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}

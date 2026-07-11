@@ -1,0 +1,34 @@
+{
+  "lead_id": "L003",
+  "lead_category": "hot",
+  "lead_score": 95,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 20,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear budget, near-term timeline, specific content service interest, and strong buying intent for an upcoming wedding event.",
+  "main_need": "Content package for a wedding event",
+  "hidden_need": "Reliable event content support that can capture and package wedding-related moments professionally",
+  "missing_information": [
+    "event date",
+    "event location",
+    "content deliverables needed",
+    "number of content team members required",
+    "expected output format",
+    "approval and revision process"
+  ],
+  "next_best_action": "Ask for the event date, location, and expected content deliverables before preparing a suitable content package recommendation.",
+  "follow_up_strategy": "consultative",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Nadia, terima kasih sudah menghubungi. Bisa banget Kak. Untuk kebutuhan konten event wedding, boleh aku tahu tanggal event-nya, lokasinya, dan output yang dibutuhkan seperti apa? Misalnya butuh dokumentasi foto, video pendek, reels, atau paket konten lengkap. Dari situ nanti aku bisa bantu arahkan paket yang paling sesuai.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review the draft message and manually ask for event details, deliverables, and timeline confirmation.",
+  "crm_note": "Wedding organizer lead from referral with clear budget and near-term event content need. Ask for event date, location, deliverables, team needs, and output format.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}

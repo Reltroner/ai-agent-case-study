@@ -1,0 +1,34 @@
+{
+  "lead_id": "L007",
+  "lead_category": "hot",
+  "lead_score": 90,
+  "priority": "high",
+  "score_breakdown": {
+    "budget_clarity": 25,
+    "timeline_urgency": 15,
+    "service_clarity": 25,
+    "buying_intent": 25
+  },
+  "qualification_reason": "The lead has a clear social media management need, clear monthly budget, next-month timeline, and strong business intent to promote a restaurant and new menu.",
+  "main_need": "Social media management for a restaurant",
+  "hidden_need": "Consistent Instagram management and promotional content to support new menu visibility",
+  "missing_information": [
+    "current Instagram account",
+    "new menu launch date",
+    "monthly content quantity",
+    "photo or video content availability",
+    "brand tone and visual style",
+    "promotion goals"
+  ],
+  "next_best_action": "Ask for the restaurant Instagram account, new menu launch date, and monthly content target before recommending a social media management package.",
+  "follow_up_strategy": "consultative",
+  "recommended_response_type": "discovery_question",
+  "follow_up_message": "Halo Kak Clara, bisa Kak. Untuk kebutuhan kelola Instagram restoran dan promo menu baru, boleh aku lihat dulu akun Instagram-nya dan tahu kira-kira menu barunya mau dipromosikan mulai kapan? Boleh juga info target konten per bulan, misalnya feed, reels, atau story, supaya aku bisa bantu arahkan paket yang paling cocok.",
+  "crm_status": "qualified_hot",
+  "next_follow_up_date": "2026-07-11",
+  "owner_action_required": "Review the draft message and manually ask for Instagram account, menu launch date, content quantity, and promotion goals.",
+  "crm_note": "Restaurant lead with clear budget and social media management need for new menu promotion. Ask for Instagram account, launch date, monthly content target, and available content assets.",
+  "quality_check": "passed",
+  "risk_flags": [],
+  "requires_human_review": true
+}
