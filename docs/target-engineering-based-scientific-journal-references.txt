@@ -1,0 +1,770 @@
+Kita **tidak perlu membuang project AI Lead Follow-Up Assistant**. Justru project itu sekarang bisa dinaikkan levelnya menjadi sistem yang lebih kuat secara business case:
+
+```text
+AI Lead Follow-Up Assistant
+-> AI Sales Recommendation & Follow-Up Assistant for UMKM
+```
+
+Jurnal yang kamu pakai cocok sebagai landasan karena problem-nya jelas: UMKM masih banyak menjalankan proses bisnis tradisional, membutuhkan e-commerce untuk pengembangan penjualan, dan sistem rekomendasi dibangun menggunakan data UMKM, data konsumen, serta data rating dengan collaborative filtering. 
+
+```text
+Target Engineering Snapshot Completion: 100% Phase 1
+Phase 2 Progress: 40%
+Current Strategic Direction: Extending lead follow-up assistant into UMKM sales recommendation architecture
+Current Engineering Position: Existing lead-follow-up workflow becomes the CRM + human-review layer of a larger recommendation-driven sales assistant
+```
+
+# Final Target Snapshot Baru
+
+Nama final yang lebih kuat:
+
+```text
+AI Sales Recommendation & Follow-Up Assistant for UMKM
+```
+
+Tagline:
+
+```text
+A journal-informed AI agent architecture that combines lead follow-up, customer intent extraction, product/service recommendation, and human-reviewed sales actions for UMKM.
+```
+
+Intinya:
+
+```text
+Customer inquiry / interaction
+-> AI extracts intent
+-> system matches product/service
+-> recommendation engine ranks best offer
+-> AI drafts follow-up
+-> owner reviews
+-> tracker stores response
+-> customer rating/interaction improves future recommendations
+```
+
+---
+
+# Kenapa Ini Tidak Sia-Sia?
+
+Yang sudah kamu bangun tetap dipakai.
+
+## Project lama kamu menjadi foundation
+
+| Yang Sudah Kamu Bangun           | Dipakai Sebagai                            |
+| -------------------------------- | ------------------------------------------ |
+| `sample-leads.csv`               | initial customer inquiry dataset           |
+| `lead-scoring-rules.md`          | lead qualification layer                   |
+| `agent-roles.md`                 | agent decomposition baseline               |
+| `output-schema.md`               | structured AI output contract              |
+| `manual-test-L001-L010.json`     | test cases for lead classification         |
+| `qa-validation-checklist.md`     | AI safety and validation layer             |
+| `google-sheet-tracker-design.md` | CRM tracker layer                          |
+| `n8n-workflow-design.md`         | automation orchestration baseline          |
+| `lead-followup-agent-v1.md`      | follow-up drafting and human-review prompt |
+
+Jadi pivot-nya bukan ganti project.
+
+Pivot-nya:
+
+```text
+From:
+AI Lead Follow-Up Assistant
+
+Into:
+AI Sales Recommendation & Follow-Up Assistant for UMKM
+```
+
+---
+
+# Business Case Berdasarkan Jurnal
+
+## Problem dari jurnal
+
+Paper menunjukkan bahwa banyak UMKM masih melakukan pemasaran secara tradisional, kurang promosi, dan belum memiliki wadah yang tepat untuk memasarkan produk. Dampaknya adalah rendahnya penjualan dan pendapatan sehingga UMKM sulit berkembang. Paper juga menyebut masyarakat kurang cepat dan tepat dalam memilih produk UMKM sehingga dibutuhkan sistem rekomendasi produk. 
+
+## Problem versi portfolio kamu
+
+```text
+UMKM do not only need faster replies.
+
+They need a system that can understand customer interest, recommend the most relevant product or service, and help the owner follow up with the right offer.
+```
+
+Versi Indonesia:
+
+```text
+UMKM tidak hanya butuh membalas chat lebih cepat.
+
+UMKM butuh sistem yang bisa memahami minat customer, merekomendasikan produk atau layanan yang paling relevan, dan membantu owner melakukan follow-up dengan penawaran yang tepat.
+```
+
+---
+
+# Final System Architecture
+
+## High-Level Architecture
+
+```text
+Customer Channels
+  -> Lead & Interaction Intake
+  -> Data Normalization
+  -> Customer Intent Extraction Agent
+  -> Lead Qualification Agent
+  -> Product / Service Catalog
+  -> Recommendation Engine
+  -> Next Best Offer Agent
+  -> Follow-Up Drafting Agent
+  -> QA Guard Agent
+  -> Human Review
+  -> CRM / Google Sheet Tracker
+  -> Customer Response & Rating Feedback
+  -> Recommendation Data Store
+```
+
+---
+
+# Architecture Diagram
+
+```text
+[Instagram DM / WhatsApp / Form / E-Commerce Interaction]
+                    |
+                    v
+        [Lead & Interaction Intake Layer]
+                    |
+                    v
+          [Normalization & Validation]
+                    |
+                    v
+        [Customer Intent Extraction Agent]
+                    |
+                    v
+        [Lead Qualification Agent]
+                    |
+                    v
+        [Product / Service Matching Layer]
+                    |
+                    v
+        [Recommendation Engine]
+        - rule-based matching
+        - collaborative filtering simulation
+        - rating / interaction scoring
+                    |
+                    v
+        [Next Best Offer Agent]
+                    |
+                    v
+        [Follow-Up Drafting Agent]
+                    |
+                    v
+        [QA Guard Agent]
+                    |
+                    v
+        [Human Review Layer]
+                    |
+                    v
+        [CRM / Google Sheet Tracker]
+                    |
+                    v
+        [Customer Response / Rating / Feedback]
+                    |
+                    v
+        [Recommendation Learning Data]
+```
+
+---
+
+# Core Modules
+
+## 1. Customer Channel Layer
+
+Sumber input:
+
+```text
+Instagram DM
+WhatsApp
+Google Form
+Website Form
+E-commerce product interaction
+Manual owner input
+```
+
+MVP kamu tetap bisa mulai dari:
+
+```text
+Manual Trigger / Google Form
+```
+
+Belum perlu WhatsApp API.
+
+---
+
+## 2. Lead & Interaction Intake Layer
+
+Tugas:
+
+```text
+Menerima lead/customer interaction
+Membersihkan field
+Menstandarkan format
+Menyimpan raw message
+Mengirim data ke agent pipeline
+```
+
+Input standar:
+
+```json
+{
+  "customer_id": "C001",
+  "lead_id": "L001",
+  "customer_name": "Dinda",
+  "business_type": "Skincare Brand",
+  "source": "Instagram DM",
+  "message": "Kak bisa bantu kelola IG brand skincare aku?",
+  "service_interest": "Social Media Management",
+  "budget_range": "2-3 juta/bulan",
+  "timeline": "Bulan ini",
+  "created_at": "2026-07-10"
+}
+```
+
+---
+
+## 3. Customer Intent Extraction Agent
+
+Ini upgrade dari project lama.
+
+Dulu kamu hanya extract `main_need`.
+
+Sekarang ditambah:
+
+```text
+customer intent
+product/service interest
+buying context
+problem signal
+urgency signal
+preference signal
+```
+
+Output:
+
+```json
+{
+  "customer_intent": "looking_for_service",
+  "interest_type": "social_media_management",
+  "problem_signal": "needs help managing Instagram",
+  "preference_signal": "monthly support",
+  "urgency_signal": "this month"
+}
+```
+
+---
+
+## 4. Lead Qualification Agent
+
+Ini tetap memakai yang sudah kamu bangun.
+
+Scoring lama tetap relevan:
+
+```text
+Budget clarity
+Timeline urgency
+Service clarity
+Buying intent
+```
+
+Output:
+
+```json
+{
+  "lead_category": "hot",
+  "lead_score": 90,
+  "priority": "high"
+}
+```
+
+---
+
+## 5. Product / Service Catalog Layer
+
+Ini modul baru berdasarkan jurnal.
+
+Karena paper membahas rekomendasi produk UMKM, kamu perlu katalog produk/layanan.
+
+Untuk project kamu, bisa mulai dari service catalog dulu.
+
+Contoh:
+
+```json
+[
+  {
+    "offer_id": "SVC001",
+    "offer_name": "Instagram Feed Design Starter",
+    "category": "design",
+    "best_for": ["coffee shop", "small brand", "low budget"],
+    "price_range": "under 1 juta",
+    "required_context": ["number of designs", "style reference"]
+  },
+  {
+    "offer_id": "SVC002",
+    "offer_name": "Monthly Social Media Management",
+    "category": "social_media_management",
+    "best_for": ["skincare brand", "restaurant", "fashion brand"],
+    "price_range": "2-5 juta/bulan",
+    "required_context": ["current account", "monthly content target"]
+  },
+  {
+    "offer_id": "SVC003",
+    "offer_name": "Launch Content Package",
+    "category": "campaign",
+    "best_for": ["fashion brand", "product launch"],
+    "price_range": "3-8 juta/project",
+    "required_context": ["launch date", "target audience", "asset needs"]
+  }
+]
+```
+
+File nanti:
+
+```text
+data/service-catalog.json
+```
+
+---
+
+## 6. Recommendation Engine
+
+Ini bagian yang menghubungkan jurnal ke project kamu.
+
+Paper memakai collaborative filtering dengan data rating 1–5, menghitung rata-rata rating user, similarity antar produk memakai adjusted cosine similarity, lalu weighted sum untuk memprediksi produk yang paling relevan. Hasil tertinggi dan positif ditampilkan sebagai rekomendasi. 
+
+Untuk MVP kamu, jangan langsung bikin ML kompleks.
+
+Buat 3 level:
+
+## Level 1 — Rule-Based Recommendation
+
+Untuk awal.
+
+```text
+customer intent + service interest + budget + timeline
+-> match to service catalog
+-> recommend best offer
+```
+
+Contoh:
+
+```text
+Skincare Brand + Social Media Management + 2-3 juta/bulan + Bulan ini
+-> Monthly Social Media Management
+```
+
+## Level 2 — Interaction-Based Recommendation
+
+Tambahkan data interaksi:
+
+```text
+viewed_offer
+clicked_offer
+asked_price
+requested_portfolio
+accepted_proposal
+rejected_offer
+```
+
+## Level 3 — Collaborative Filtering Simulation
+
+Baru setelah ada data rating/interaksi.
+
+Data yang dibutuhkan:
+
+```text
+customer_id
+offer_id
+rating
+interaction_type
+created_at
+```
+
+Contoh:
+
+```csv
+customer_id,offer_id,rating,interaction_type
+C001,SVC002,5,accepted_proposal
+C002,SVC001,4,asked_price
+C003,SVC003,5,requested_portfolio
+```
+
+---
+
+# Recommendation Engine Flow
+
+```text
+Customer interaction
+-> collect rating / implicit signal
+-> build customer-offer matrix
+-> calculate average customer rating
+-> calculate offer similarity
+-> predict offer score
+-> recommend highest positive offer
+-> send to Next Best Offer Agent
+```
+
+Ini mengikuti pola jurnal:
+
+```text
+rating data
+-> average rating
+-> adjusted cosine similarity
+-> weighted sum prediction
+-> highest predicted product recommendation
+```
+
+---
+
+# 7. Next Best Offer Agent
+
+Agent ini baru.
+
+Tugas:
+
+```text
+Mengambil hasil recommendation engine
+Menentukan offer paling relevan
+Menjelaskan kenapa offer itu cocok
+Menentukan apakah offer boleh ditawarkan sekarang atau perlu discovery dulu
+```
+
+Output:
+
+```json
+{
+  "recommended_offer_id": "SVC002",
+  "recommended_offer_name": "Monthly Social Media Management",
+  "recommendation_reason": "The lead is a skincare brand asking for monthly Instagram management with clear budget and this-month timeline.",
+  "recommendation_confidence": "high",
+  "offer_action": "ask_discovery_before_package"
+}
+```
+
+---
+
+# 8. Follow-Up Drafting Agent
+
+Ini tetap pakai yang sudah kamu bangun, tapi diperluas.
+
+Dulu draft hanya menjawab lead.
+
+Sekarang draft harus membawa konteks:
+
+```text
+customer intent
+lead score
+recommended offer
+missing information
+human review
+```
+
+Contoh output:
+
+```json
+{
+  "follow_up_message": "Halo Kak Dinda, bisa banget Kak. Dari kebutuhan Kakak untuk kelola IG skincare brand dengan timeline bulan ini, kemungkinan paling cocok arahnya ke monthly social media management. Sebelum aku kasih rekomendasi paket, boleh aku lihat akun Instagram-nya dan target konten bulan ini seperti apa?"
+}
+```
+
+---
+
+# 9. QA Guard Agent
+
+Tetap dipakai.
+
+Tapi rule-nya ditambah:
+
+```text
+Jangan rekomendasikan produk kalau confidence rendah
+Jangan klaim produk pasti cocok
+Jangan menjanjikan hasil penjualan
+Jangan auto-send
+Jangan membuat pricing final tanpa approval owner
+```
+
+Risk flags baru:
+
+```text
+low_recommendation_confidence
+insufficient_interaction_data
+cold_start_customer
+cold_start_offer
+offer_budget_mismatch
+recommendation_needs_review
+```
+
+---
+
+# 10. Human Review Layer
+
+Tetap wajib.
+
+```text
+AI recommends
+AI drafts
+Owner reviews
+Owner approves / edits / rejects
+Owner sends manually
+```
+
+Ini mempertahankan prinsip safety dari project kamu.
+
+---
+
+# 11. CRM & Feedback Tracker
+
+Google Sheet tracker kamu diperluas.
+
+Kolom baru:
+
+```text
+customer_id
+recommended_offer_id
+recommended_offer_name
+recommendation_score
+recommendation_confidence
+recommendation_reason
+offer_action
+customer_response
+customer_rating
+interaction_type
+feedback_recorded_at
+```
+
+Nanti file baru:
+
+```text
+tracker/recommendation-tracker-columns.csv
+```
+
+---
+
+# Target Final Snapshot Engineering
+
+Target akhirnya bukan sekadar n8n workflow.
+
+Target akhirnya:
+
+```text
+Journal-informed AI agent architecture for UMKM sales recommendation and follow-up.
+```
+
+Dengan bukti artifact:
+
+```text
+1. Existing lead follow-up foundation
+2. Scientific journal mapping
+3. System architecture design
+4. Product/service catalog schema
+5. Customer interaction schema
+6. Recommendation output schema
+7. Rule-based recommendation MVP
+8. Collaborative filtering simulation plan
+9. n8n semi-automated workflow
+10. Google Sheet CRM + recommendation tracker
+11. Human-review safety layer
+12. Case study portfolio
+```
+
+---
+
+# Final Architecture Snapshot
+
+```text
+AI Sales Recommendation & Follow-Up Assistant for UMKM
+
+Input:
+- customer inquiry
+- product/service catalog
+- customer interaction
+- rating data
+
+Process:
+- normalize input
+- extract customer intent
+- qualify lead
+- match product/service
+- rank recommendation
+- generate next best offer
+- draft follow-up
+- run QA guard
+- request human review
+
+Output:
+- recommended product/service
+- recommendation reason
+- lead priority
+- follow-up draft
+- CRM status
+- risk flags
+- human review status
+- customer feedback loop
+```
+
+---
+
+# New Target Repository Structure
+
+Tambahkan tanpa menghapus struktur lama:
+
+```text
+docs/
+  journal-business-case-mapping.md
+  final-system-architecture.md
+  recommendation-engine-design.md
+  customer-interaction-model.md
+  recommendation-output-schema.md
+
+data/
+  sample-leads.csv
+  service-catalog.json
+  customer-interactions.csv
+  sample-ratings.csv
+
+tracker/
+  lead-tracker-columns.csv
+  recommendation-tracker-columns.csv
+
+n8n/
+  manual-trigger-sample.json
+  manual-trigger-review-sample.json
+  ai-processing-node-prompt.md
+  recommendation-node-prompt.md
+
+outputs/
+  manual-test-L001.json
+  ...
+  recommendation-test-C001.json
+
+case-study/
+  ai-lead-followup-assistant-case-study-v0.md
+  ai-sales-recommendation-followup-case-study-v1.md
+```
+
+---
+
+# Engineering Roadmap dari Titik Kamu Sekarang
+
+Kamu sekarang ada di Phase 2, tapi arah final berubah menjadi lebih kuat.
+
+## Phase 2A — Stabilkan Workflow Lama
+
+Lanjutkan yang sedang kamu bangun:
+
+```text
+n8n input
+-> AI processing
+-> JSON parse
+-> Google Sheet tracker
+```
+
+Ini tetap perlu.
+
+## Phase 2B — Tambah Recommendation Layer
+
+Setelah tracker jalan, baru tambahkan:
+
+```text
+service catalog
+customer interaction data
+rule-based recommendation
+next best offer agent
+```
+
+## Phase 3 — Journal-Informed Recommendation Simulation
+
+Bangun simulasi collaborative filtering sederhana:
+
+```text
+sample-ratings.csv
+-> average rating
+-> similarity matrix
+-> weighted prediction
+-> recommended offer
+```
+
+## Phase 4 — Portfolio Case Study v1
+
+Update case study:
+
+```text
+From lead follow-up assistant
+To AI sales recommendation and follow-up assistant for UMKM
+```
+
+---
+
+# Chunk Baru yang Aku Sarankan
+
+Sebelum lanjut chunk teknis n8n 2.6, lebih baik sisipkan chunk strategis baru:
+
+```text
+Chunk 2.5A — Journal-Based Architecture Pivot
+```
+
+File:
+
+```text
+docs/journal-business-case-mapping.md
+```
+
+Isi file ini akan mengunci:
+
+```text
+1. Paper reference
+2. Problem from journal
+3. Business case interpretation
+4. Connection to existing project
+5. New architecture direction
+6. Final engineering snapshot target
+```
+
+Setelah itu baru lanjut:
+
+```text
+Chunk 2.5B — Final System Architecture
+File: docs/final-system-architecture.md
+```
+
+---
+
+# Kesimpulan Strategis
+
+Arah terbaik sekarang:
+
+```text
+Jangan buang AI Lead Follow-Up Assistant.
+Jadikan itu sebagai Phase 1 foundation.
+Naikkan menjadi AI Sales Recommendation & Follow-Up Assistant for UMKM.
+```
+
+Karena project lama kamu sudah membuktikan:
+
+```text
+lead input
+-> classification
+-> follow-up draft
+-> CRM status
+-> human review
+```
+
+Jurnal menambahkan layer baru:
+
+```text
+customer/product data
+-> rating data
+-> recommendation system
+-> product/service recommendation
+```
+
+Gabungannya menjadi portfolio engineering yang jauh lebih kuat:
+
+```text
+AI Agent + Business Workflow + Recommendation System + UMKM Sales Case + Human Review + Deterministic Architecture
+```

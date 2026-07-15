@@ -1,0 +1,44 @@
+column_order,column_key,section,source,data_type,required,default_value,notes
+1,recommendation_id,Recommendation Identity,system,string,yes,,Unique recommendation record identifier
+2,lead_id,Recommendation Identity,input,string,yes,,Linked lead identifier
+3,customer_id,Recommendation Identity,input,string,yes,,Linked customer identifier
+4,customer_name,Lead Context,input,string,yes,,Customer or lead name
+5,business_type,Lead Context,input,string,yes,,Customer business type
+6,source,Lead Context,input,string,yes,,Lead source channel
+7,service_interest,Lead Context,input,string,yes,,Requested service or interest
+8,budget_range,Lead Context,input,string,yes,,Budget signal from lead
+9,timeline,Lead Context,input,string,yes,,Timeline signal from lead
+10,message,Lead Context,input,string,yes,,Original customer message
+11,lead_category,Lead Qualification,ai_output,string,yes,,Lead category from qualification agent
+12,lead_score,Lead Qualification,ai_output,number,yes,,Lead score from 0 to 100
+13,priority,Lead Qualification,ai_output,string,yes,,Lead priority level
+14,recommended_offer_id,Recommendation Output,recommendation_engine,string,yes,,Offer ID from service catalog
+15,recommended_offer_name,Recommendation Output,recommendation_engine,string,yes,,Offer name from service catalog
+16,recommended_offer_category,Recommendation Output,recommendation_engine,string,yes,,Offer category from service catalog
+17,recommendation_score,Recommendation Output,recommendation_engine,number,yes,,Recommendation score from 0 to 100
+18,recommendation_confidence,Recommendation Output,recommendation_engine,string,yes,,Allowed values high medium low review
+19,recommendation_method,Recommendation Output,recommendation_engine,string,yes,rule_based,Allowed values rule_based interaction_based collaborative_filtering_simulation fallback
+20,recommendation_reason,Recommendation Output,recommendation_engine,string,yes,,Reason why this offer is recommended
+21,offer_action,Recommendation Output,recommendation_engine,string,yes,,Recommended sales action after recommendation
+22,matched_service_interest_score,Matched Signals,recommendation_engine,number,yes,0,Service interest match score from 0 to 30
+23,matched_business_type_score,Matched Signals,recommendation_engine,number,yes,0,Business type fit score from 0 to 20
+24,matched_budget_score,Matched Signals,recommendation_engine,number,yes,0,Budget fit score from 0 to 20
+25,matched_timeline_score,Matched Signals,recommendation_engine,number,yes,0,Timeline fit score from 0 to 10
+26,matched_lead_quality_score,Matched Signals,recommendation_engine,number,yes,0,Lead quality fit score from 0 to 10
+27,matched_required_context_score,Matched Signals,recommendation_engine,number,yes,0,Required context readiness score from 0 to 10
+28,missing_recommendation_context,Recommendation QA,recommendation_engine,array_as_text,no,[],Missing context before confident recommendation
+29,recommendation_risk_flags,Recommendation QA,recommendation_engine,array_as_text,no,[],Risk flags from recommendation layer
+30,requires_human_review,Recommendation QA,recommendation_engine,boolean,yes,true,Must always be true
+31,human_review_status,Human Review,human_input,string,yes,pending_review,Allowed values pending_review approved edited rejected sent_manually no_action
+32,human_decision,Human Review,human_input,string,no,,Allowed values send_as_is edit_before_send ask_more_context ignore_lead mark_as_lost manual_follow_up_needed
+33,reviewed_at,Human Review,human_input,date,no,,Date when owner reviewed the recommendation
+34,final_message_sent,Human Review,human_input,string,yes,no,Allowed values yes no
+35,owner_notes,Human Review,human_input,string,no,,Owner notes after reviewing recommendation
+36,customer_response,Customer Feedback,feedback_input,string,no,,Customer response after manual follow up
+37,interaction_type,Customer Feedback,feedback_input,string,no,,Customer interaction type after recommendation
+38,customer_rating,Customer Feedback,feedback_input,number,no,,Optional customer rating from 1 to 5
+39,feedback_recorded_at,Customer Feedback,feedback_input,date,no,,Date when feedback was recorded
+40,source_catalog_version,Audit,system,string,no,v1,Service catalog version used for recommendation
+41,output_schema_version,Audit,system,string,no,v1,Recommendation output schema version
+42,recommendation_created_at,Audit,system,date,yes,,Date when recommendation was created
+43,recommendation_updated_at,Audit,system,date,no,,Date when recommendation row was updated

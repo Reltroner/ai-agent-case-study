@@ -1,0 +1,479 @@
+[
+  {
+    "offer_id": "SVC001",
+    "offer_name": "Instagram Feed Design Starter",
+    "category": "design",
+    "keywords": [
+      "instagram feed design",
+      "feed design",
+      "desain feed",
+      "instagram design",
+      "visual design",
+      "social media design"
+    ],
+    "best_for": [
+      "coffee shop",
+      "small business",
+      "local brand",
+      "low budget lead",
+      "business with simple content needs"
+    ],
+    "price_range": "under 1 juta",
+    "minimum_budget_signal": "low",
+    "ideal_lead_category": [
+      "warm",
+      "cold"
+    ],
+    "required_context": [
+      "number of feed designs needed",
+      "current Instagram account",
+      "preferred design style",
+      "content topics",
+      "deadline"
+    ],
+    "offer_description": "A starter design service for small businesses that need Instagram feed visuals without full monthly social media management.",
+    "recommended_when": [
+      "lead asks about Instagram feed design",
+      "lead has limited budget",
+      "lead is still comparing prices",
+      "lead does not need full social media management yet"
+    ],
+    "not_recommended_when": [
+      "lead needs full content planning and posting management",
+      "lead needs campaign strategy",
+      "lead needs website or landing page"
+    ],
+    "default_offer_action": "clarify_scope_before_offer"
+  },
+  {
+    "offer_id": "SVC002",
+    "offer_name": "Monthly Social Media Management",
+    "category": "social_media_management",
+    "keywords": [
+      "social media management",
+      "kelola instagram",
+      "manage instagram",
+      "content management",
+      "monthly content",
+      "instagram management"
+    ],
+    "best_for": [
+      "skincare brand",
+      "restaurant",
+      "fashion brand",
+      "local brand",
+      "business needing consistent content"
+    ],
+    "price_range": "2-5 juta/bulan",
+    "minimum_budget_signal": "medium",
+    "ideal_lead_category": [
+      "hot",
+      "warm"
+    ],
+    "required_context": [
+      "current Instagram account",
+      "monthly content target",
+      "brand style preference",
+      "approval process",
+      "posting frequency",
+      "content goals"
+    ],
+    "offer_description": "A monthly social media management service for businesses that need consistent Instagram content planning, design, and publishing support.",
+    "recommended_when": [
+      "lead asks for Instagram management",
+      "lead has monthly budget",
+      "lead needs consistent content",
+      "lead wants support this month or next month"
+    ],
+    "not_recommended_when": [
+      "lead only needs one-time feed design",
+      "lead budget is clearly below 1 juta",
+      "lead only asks for general marketing information"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC003",
+    "offer_name": "Launch Content Package",
+    "category": "campaign",
+    "keywords": [
+      "launching",
+      "launch content",
+      "rebranding",
+      "campaign",
+      "content package",
+      "brand launch",
+      "product launch"
+    ],
+    "best_for": [
+      "fashion brand",
+      "product launch",
+      "event launch",
+      "new brand",
+      "business preparing campaign"
+    ],
+    "price_range": "3-8 juta/project",
+    "minimum_budget_signal": "medium",
+    "ideal_lead_category": [
+      "hot",
+      "warm"
+    ],
+    "required_context": [
+      "launch date",
+      "target audience",
+      "brand identity status",
+      "number of content assets needed",
+      "platforms to be used",
+      "visual reference",
+      "approval timeline"
+    ],
+    "offer_description": "A campaign-focused content package for brands preparing a product launch, rebranding campaign, or promotional event.",
+    "recommended_when": [
+      "lead mentions rebranding",
+      "lead mentions launching",
+      "lead has near-term campaign timeline",
+      "lead has clear project budget"
+    ],
+    "not_recommended_when": [
+      "lead only needs basic feed design",
+      "lead has no launch timeline",
+      "lead asks for general marketing services only"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC004",
+    "offer_name": "Landing Page Starter",
+    "category": "website",
+    "keywords": [
+      "landing page",
+      "website",
+      "online course page",
+      "sales page",
+      "registration page",
+      "course landing page"
+    ],
+    "best_for": [
+      "online course",
+      "training provider",
+      "digital product",
+      "campaign",
+      "lead generation"
+    ],
+    "price_range": "project-based",
+    "minimum_budget_signal": "unknown",
+    "ideal_lead_category": [
+      "hot",
+      "warm"
+    ],
+    "required_context": [
+      "offer details",
+      "course topic",
+      "target audience",
+      "conversion goal",
+      "content readiness",
+      "payment or registration flow",
+      "design reference",
+      "launch deadline"
+    ],
+    "offer_description": "A starter landing page service for businesses that need a focused page to present an offer, collect leads, or support campaign conversion.",
+    "recommended_when": [
+      "lead asks for landing page",
+      "lead has urgent launch need",
+      "lead needs a page for online course or campaign",
+      "lead already has clear offer direction"
+    ],
+    "not_recommended_when": [
+      "lead only asks for Instagram content",
+      "lead needs full e-commerce platform",
+      "lead has no defined offer yet"
+    ],
+    "default_offer_action": "clarify_budget_before_offer"
+  },
+  {
+    "offer_id": "SVC005",
+    "offer_name": "Event Content Package",
+    "category": "event_content",
+    "keywords": [
+      "event content",
+      "wedding content",
+      "event documentation",
+      "content package",
+      "reels event",
+      "photo video event"
+    ],
+    "best_for": [
+      "wedding organizer",
+      "event organizer",
+      "community event",
+      "brand activation",
+      "offline event"
+    ],
+    "price_range": "3-7 juta/event",
+    "minimum_budget_signal": "medium",
+    "ideal_lead_category": [
+      "hot",
+      "warm"
+    ],
+    "required_context": [
+      "event date",
+      "event location",
+      "event duration",
+      "content deliverables needed",
+      "number of team members required",
+      "expected output format",
+      "revision process"
+    ],
+    "offer_description": "A content support package for events that need photo, short video, reels, or social media-ready documentation.",
+    "recommended_when": [
+      "lead mentions wedding event",
+      "lead mentions upcoming event",
+      "lead needs content team",
+      "lead has clear event timeline"
+    ],
+    "not_recommended_when": [
+      "lead only needs monthly social media management",
+      "lead has no event date",
+      "lead only asks for feed design"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC006",
+    "offer_name": "Marketing Discovery Consultation",
+    "category": "consultation",
+    "keywords": [
+      "marketing consultation",
+      "konsultasi marketing",
+      "jasa marketing",
+      "marketing help",
+      "business consultation",
+      "marketing options"
+    ],
+    "best_for": [
+      "local gym",
+      "small business",
+      "business with unclear marketing need",
+      "early-stage lead",
+      "cold lead"
+    ],
+    "price_range": "consultation-based",
+    "minimum_budget_signal": "unknown",
+    "ideal_lead_category": [
+      "cold",
+      "warm",
+      "needs_review"
+    ],
+    "required_context": [
+      "specific marketing problem",
+      "business goal",
+      "available budget",
+      "timeline",
+      "current marketing channels",
+      "decision-making stage"
+    ],
+    "offer_description": "A discovery consultation for leads that are still exploring marketing options and do not yet know which service they need.",
+    "recommended_when": [
+      "lead asks general marketing service information",
+      "lead has no budget",
+      "lead has no timeline",
+      "lead has unclear service need",
+      "lead needs direction before package recommendation"
+    ],
+    "not_recommended_when": [
+      "lead already has clear service need and budget",
+      "lead is ready for proposal",
+      "lead specifically asks for a website, campaign, or monthly management"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC007",
+    "offer_name": "Restaurant Social Media Promo Package",
+    "category": "social_media_management",
+    "keywords": [
+      "restaurant promotion",
+      "menu promotion",
+      "social media restaurant",
+      "food content",
+      "promo menu",
+      "restaurant instagram"
+    ],
+    "best_for": [
+      "restaurant",
+      "cafe",
+      "coffee shop",
+      "food business",
+      "local food brand"
+    ],
+    "price_range": "3-5 juta/bulan",
+    "minimum_budget_signal": "medium",
+    "ideal_lead_category": [
+      "hot",
+      "warm"
+    ],
+    "required_context": [
+      "current Instagram account",
+      "new menu launch date",
+      "monthly content quantity",
+      "photo or video content availability",
+      "promotion goals",
+      "brand tone"
+    ],
+    "offer_description": "A social media promo package for restaurants or food businesses that need Instagram content and promotional support for menu campaigns.",
+    "recommended_when": [
+      "lead is a restaurant or food business",
+      "lead needs Instagram management",
+      "lead mentions new menu promotion",
+      "lead has monthly budget"
+    ],
+    "not_recommended_when": [
+      "lead does not operate in food business",
+      "lead only needs product photography",
+      "lead has no promotional goal"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC008",
+    "offer_name": "Lead Generation Campaign Setup",
+    "category": "lead_generation",
+    "keywords": [
+      "lead generation",
+      "campaign",
+      "buyer campaign",
+      "property buyer",
+      "ads campaign",
+      "sales campaign",
+      "generate leads"
+    ],
+    "best_for": [
+      "real estate agent",
+      "property business",
+      "training provider",
+      "high-ticket service",
+      "business needing buyer leads"
+    ],
+    "price_range": "5-10 juta/project",
+    "minimum_budget_signal": "high",
+    "ideal_lead_category": [
+      "hot"
+    ],
+    "required_context": [
+      "offer or property details",
+      "target customer profile",
+      "campaign location",
+      "available marketing assets",
+      "preferred advertising channels",
+      "definition of qualified lead",
+      "campaign success metric"
+    ],
+    "offer_description": "A campaign setup service for businesses that need structured lead generation for buyers, prospects, or qualified inquiries.",
+    "recommended_when": [
+      "lead asks for buyer acquisition",
+      "lead needs leads this month",
+      "lead has clear campaign budget",
+      "lead has urgent timeline"
+    ],
+    "not_recommended_when": [
+      "lead budget is low",
+      "lead only needs organic content",
+      "lead has unclear product or offer"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  },
+  {
+    "offer_id": "SVC009",
+    "offer_name": "Product Photography Starter",
+    "category": "product_photography",
+    "keywords": [
+      "product photography",
+      "foto produk",
+      "catalog photo",
+      "product catalog",
+      "marketplace photo",
+      "instagram product photo"
+    ],
+    "best_for": [
+      "handmade craft store",
+      "small product business",
+      "fashion product",
+      "food product",
+      "local brand"
+    ],
+    "price_range": "project-based",
+    "minimum_budget_signal": "unknown",
+    "ideal_lead_category": [
+      "warm",
+      "cold"
+    ],
+    "required_context": [
+      "number of products",
+      "photo style reference",
+      "usage channel",
+      "budget flexibility",
+      "expected timeline",
+      "whether product styling is needed"
+    ],
+    "offer_description": "A starter product photography service for small product-based businesses that need catalog, marketplace, or Instagram-ready product visuals.",
+    "recommended_when": [
+      "lead asks for product photography",
+      "lead needs catalog visuals",
+      "lead is still clarifying budget",
+      "lead has product-based business"
+    ],
+    "not_recommended_when": [
+      "lead needs full campaign strategy",
+      "lead needs landing page",
+      "lead needs monthly social media management"
+    ],
+    "default_offer_action": "clarify_budget_before_offer"
+  },
+  {
+    "offer_id": "SVC010",
+    "offer_name": "Website and Content Strategy Package",
+    "category": "website_strategy",
+    "keywords": [
+      "website strategy",
+      "content strategy",
+      "website and content",
+      "corporate training website",
+      "training provider website",
+      "business website"
+    ],
+    "best_for": [
+      "training provider",
+      "online course",
+      "consulting business",
+      "corporate service",
+      "education business"
+    ],
+    "price_range": "8-15 juta/project",
+    "minimum_budget_signal": "high",
+    "ideal_lead_category": [
+      "hot"
+    ],
+    "required_context": [
+      "current website condition",
+      "training program details",
+      "target corporate audience",
+      "required website pages",
+      "content channels",
+      "conversion goal",
+      "decision timeline"
+    ],
+    "offer_description": "A strategic website and content planning package for service businesses that need stronger digital presence and conversion-oriented content structure.",
+    "recommended_when": [
+      "lead needs website and content strategy",
+      "lead has corporate audience",
+      "lead has clear monthly or project budget",
+      "lead needs business credibility and conversion support"
+    ],
+    "not_recommended_when": [
+      "lead only needs simple feed design",
+      "lead budget is very low",
+      "lead has no defined offer or program"
+    ],
+    "default_offer_action": "ask_discovery_before_package"
+  }
+]

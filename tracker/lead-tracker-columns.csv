@@ -1,0 +1,37 @@
+column_order,column_key,section,source,data_type,required,default_value,notes
+1,lead_id,Lead Identity,input,string,yes,,Unique lead identifier
+2,lead_name,Lead Identity,input,string,yes,,Lead name
+3,business_type,Lead Identity,input,string,yes,,Business type or industry
+4,source,Lead Identity,input,string,yes,,Lead source such as Instagram DM WhatsApp Website Form or Referral
+5,service_interest,Lead Identity,input,string,yes,,Service requested by the lead
+6,budget_range,Lead Identity,input,string,yes,,Budget information from lead
+7,timeline,Lead Identity,input,string,yes,,Expected timeline from lead
+8,message,Lead Identity,input,string,yes,,Original lead message
+9,created_at,Lead Identity,input,date,yes,,Lead creation date
+10,lead_category,Lead Qualification,ai_output,string,yes,,Allowed values hot warm cold needs_review
+11,lead_score,Lead Qualification,ai_output,number,yes,,Total score from 0 to 100
+12,priority,Lead Qualification,ai_output,string,yes,,Allowed values high medium low review
+13,budget_clarity_score,Lead Qualification,ai_output,number,yes,,Score from 0 to 25
+14,timeline_urgency_score,Lead Qualification,ai_output,number,yes,,Score from 0 to 25
+15,service_clarity_score,Lead Qualification,ai_output,number,yes,,Score from 0 to 25
+16,buying_intent_score,Lead Qualification,ai_output,number,yes,,Score from 0 to 25
+17,qualification_reason,Lead Qualification,ai_output,string,yes,,Short explanation for classification
+18,main_need,Need & Strategy,ai_output,string,yes,,Explicit customer need
+19,hidden_need,Need & Strategy,ai_output,string,no,,Implied business need
+20,missing_information,Need & Strategy,ai_output,array_as_text,no,[],Important missing information
+21,next_best_action,Need & Strategy,ai_output,string,yes,,Recommended next action
+22,follow_up_strategy,Need & Strategy,ai_output,string,yes,,Strategy such as consultative pricing_clarification manual_review
+23,recommended_response_type,Need & Strategy,ai_output,string,yes,,Response type such as discovery_question pricing_question manual_review
+24,follow_up_message,Follow-Up Draft,ai_output,string,yes,,Draft message for human review
+25,crm_status,Follow-Up Draft,ai_output,string,yes,,Recommended CRM status
+26,next_follow_up_date,Follow-Up Draft,ai_output,date,no,,Recommended follow-up date
+27,owner_action_required,Follow-Up Draft,ai_output,string,yes,,Action required from owner
+28,crm_note,Follow-Up Draft,ai_output,string,yes,,Short CRM note
+29,quality_check,QA & Human Review,ai_output,string,yes,,Allowed values passed needs_review
+30,risk_flags,QA & Human Review,ai_output,array_as_text,no,[],Risk flags from QA Guard Agent
+31,requires_human_review,QA & Human Review,ai_output,boolean,yes,true,Must always be true
+32,human_review_status,QA & Human Review,human_input,string,yes,pending_review,Allowed values pending_review approved edited rejected sent_manually no_action
+33,human_decision,QA & Human Review,human_input,string,no,,Allowed values send_as_is edit_before_send ask_more_context ignore_lead mark_as_lost manual_follow_up_needed
+34,reviewed_at,QA & Human Review,human_input,date,no,,Date when owner reviewed the output
+35,final_message_sent,QA & Human Review,human_input,string,yes,no,Allowed values yes no
+36,notes,QA & Human Review,human_input,string,no,,Additional human notes
