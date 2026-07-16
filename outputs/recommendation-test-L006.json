@@ -1,0 +1,32 @@
+{
+  "customer_id": "C006",
+  "lead_id": "L006",
+  "recommended_offer_id": "SVC006",
+  "recommended_offer_name": "Marketing Discovery Consultation",
+  "recommended_offer_category": "consultation",
+  "recommendation_score": 58,
+  "recommendation_confidence": "medium",
+  "recommendation_method": "rule_based",
+  "recommendation_reason": "The lead is a local gym asking for general information about available marketing services. Because the budget, timeline, business goal, and specific marketing problem are still unknown, a discovery consultation is safer than recommending a fixed service package.",
+  "offer_action": "ask_discovery_before_package",
+  "matched_signals": {
+    "service_interest_match": 30,
+    "business_type_fit": 20,
+    "budget_fit": 5,
+    "timeline_fit": 0,
+    "lead_quality_fit": 3,
+    "required_context_readiness": 0
+  },
+  "missing_recommendation_context": [
+    "specific marketing problem",
+    "business goal",
+    "available budget",
+    "timeline",
+    "current marketing channels",
+    "decision-making stage"
+  ],
+  "recommendation_risk_flags": [
+    "recommendation_needs_review"
+  ],
+  "requires_human_review": true
+}

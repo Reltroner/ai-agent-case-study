@@ -1,0 +1,30 @@
+{
+  "customer_id": "C001",
+  "lead_id": "L001",
+  "recommended_offer_id": "SVC002",
+  "recommended_offer_name": "Monthly Social Media Management",
+  "recommended_offer_category": "social_media_management",
+  "recommendation_score": 95,
+  "recommendation_confidence": "high",
+  "recommendation_method": "rule_based",
+  "recommendation_reason": "The lead is a skincare brand asking for social media management with a clear monthly budget and this-month timeline, making Monthly Social Media Management the strongest catalog match.",
+  "offer_action": "ask_discovery_before_package",
+  "matched_signals": {
+    "service_interest_match": 30,
+    "business_type_fit": 20,
+    "budget_fit": 20,
+    "timeline_fit": 10,
+    "lead_quality_fit": 10,
+    "required_context_readiness": 5
+  },
+  "missing_recommendation_context": [
+    "current Instagram account",
+    "monthly content target",
+    "brand style preference",
+    "approval process",
+    "posting frequency",
+    "content goals"
+  ],
+  "recommendation_risk_flags": [],
+  "requires_human_review": true
+}

@@ -15,21 +15,21 @@ Jurnal Sistem Informasi Bisnis, Vol. 15 No. 1, 2025
 Core topic:
 
 ```text
-E-commerce, UMKM, recommendation information system, collaborative filtering, sales development
+E-commerce, MSME, recommendation information system, collaborative filtering, sales development
 ```
 
 ---
 
 ## Journal-Based Problem
 
-The journal describes several important UMKM problems:
+The journal describes several important MSME problems:
 
-1. Many UMKM still run traditional business processes.
-2. UMKM need better digital sales channels through e-commerce.
-3. Many UMKM lack proper promotional platforms.
-4. Customers need help choosing UMKM products quickly and accurately.
+1. Many MSME still run traditional business processes.
+2. MSME need better digital sales channels through e-commerce.
+3. Many MSME lack proper promotional platforms.
+4. Customers need help choosing MSME products quickly and accurately.
 5. A recommendation system can help customers find relevant products.
-6. Collaborative filtering can use UMKM data, consumer data, and rating data to generate recommendations.
+6. Collaborative filtering can use MSME data, consumer data, and rating data to generate recommendations.
 
 The journal uses collaborative filtering to recommend products based on user ratings and product similarity.
 
@@ -50,13 +50,13 @@ rating data
 The business case is not only:
 
 ```text
-UMKM need e-commerce.
+MSME need e-commerce.
 ```
 
 The deeper business case is:
 
 ```text
-UMKM need a system that can understand customer interest, recommend the most relevant product or service, and help the owner follow up with the right offer.
+MSME need a system that can understand customer interest, recommend the most relevant product or service, and help the owner follow up with the right offer.
 ```
 
 This is where the existing AI Lead Follow-Up Assistant becomes valuable.
@@ -136,20 +136,20 @@ Help small service businesses classify leads, draft follow-up messages, and trac
 ## New Direction
 
 ```text
-AI Sales Recommendation & Follow-Up Assistant for UMKM
+AI Sales Recommendation & Follow-Up Assistant for MSME
 ```
 
 Main purpose:
 
 ```text
-Help UMKM understand customer interest, recommend relevant products or services, generate next-best-offer follow-up drafts, and track owner-reviewed sales actions.
+Help MSME understand customer interest, recommend relevant products or services, generate next-best-offer follow-up drafts, and track owner-reviewed sales actions.
 ```
 
 ---
 
 ## Updated Problem Statement
 
-UMKM often struggle not only because they reply slowly, but because customer interest is not converted into a relevant sales recommendation.
+MSME often struggle not only because they reply slowly, but because customer interest is not converted into a relevant sales recommendation.
 
 Incoming messages, product interest, customer preferences, budget signals, and prior interactions are often scattered.
 
@@ -166,7 +166,7 @@ As a result:
 
 ## Updated Solution Statement
 
-AI Sales Recommendation & Follow-Up Assistant for UMKM is a journal-informed AI agent architecture that combines:
+AI Sales Recommendation & Follow-Up Assistant for MSME is a journal-informed AI agent architecture that combines:
 
 * customer inquiry intake
 * intent extraction
@@ -179,7 +179,7 @@ AI Sales Recommendation & Follow-Up Assistant for UMKM is a journal-informed AI 
 * human review
 * CRM and feedback tracking
 
-The system is designed to help UMKM turn customer inquiries and interaction data into structured, relevant, and owner-reviewed sales actions.
+The system is designed to help MSME turn customer inquiries and interaction data into structured, relevant, and owner-reviewed sales actions.
 
 ---
 
@@ -209,10 +209,10 @@ The result is a more structured sales decision workflow.
 
 | Journal Concept                   | System Architecture Interpretation        |
 | --------------------------------- | ----------------------------------------- |
-| UMKM sales development            | Business goal                             |
+| MSME sales development            | Business goal                             |
 | E-commerce platform               | Digital sales channel                     |
 | Recommendation information system | Recommendation engine layer               |
-| UMKM data                         | Product/service catalog                   |
+| MSME data                         | Product/service catalog                   |
 | Consumer data                     | Customer profile and inquiry data         |
 | Rating data                       | Customer feedback and interaction data    |
 | Collaborative filtering           | Recommendation algorithm simulation       |
@@ -365,7 +365,7 @@ Existing score criteria:
 Purpose:
 
 ```text
-Store available UMKM products or services that can be recommended.
+Store available MSME products or services that can be recommended.
 ```
 
 Initial MVP can use service catalog instead of full product catalog.
@@ -606,7 +606,7 @@ feedback_recorded_at
 The final target is:
 
 ```text
-Journal-informed AI agent architecture for UMKM sales recommendation and follow-up.
+Journal-informed AI agent architecture for MSME sales recommendation and follow-up.
 ```
 
 The final snapshot should prove:
@@ -704,7 +704,7 @@ AI Lead Follow-Up Assistant
 Into:
 
 ```text
-AI Sales Recommendation & Follow-Up Assistant for UMKM
+AI Sales Recommendation & Follow-Up Assistant for MSME
 ```
 
 ---
@@ -720,13 +720,13 @@ Final strategic framing:
 ```text
 AI Lead Follow-Up Assistant is the CRM and follow-up foundation.
 
-The journal-based recommendation layer turns it into an AI Sales Recommendation & Follow-Up Assistant for UMKM.
+The journal-based recommendation layer turns it into an AI Sales Recommendation & Follow-Up Assistant for MSME.
 ```
 
 This creates a stronger portfolio because it combines:
 
 * AI agent workflow
-* UMKM business problem
+* MSME business problem
 * recommendation system concept
 * lead qualification
 * sales follow-up
